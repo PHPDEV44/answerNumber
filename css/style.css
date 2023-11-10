@@ -1,0 +1,21 @@
+body {
+    height: 100vh;
+}
+.game-card {
+    margin-top: 20px;
+    font-family: 'Open Sans', monospace;
+
+}
+
+#logo {
+display: flex;
+vertical-align: middle;
+align-items: center;
+margin-right: auto;
+margin-left: auto;
+margin-top:7vh;
+pointer-events: none;
+user-select: none;
+
+}
+

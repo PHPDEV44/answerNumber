@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Угадайка</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <div>
+    <img src="img/logo.png" class="selectDisable" alt="Угадайка-logo" id="logo">
+    </div>
+<div class="container">
+    <div class="row game-card align-items-center">
+        <div class="col">
+            <div class="card text-center collapse" id="game-window">
+                <div class="card-header">
+                    <p class="m-0">Вопрос №<span id="orderNumberField">5</span></p>
+                </div>
+                <div class="card-body">
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <h3 class="card-title m-0"><span id="answerField">Вы загадали число 5?</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="btn-group row">
+                        <button class="btn btn-info" id="btnLess">↓<br>меньше</button>
+                        <button class="btn btn-success btn-lg" id="btnEqual">Верно!</button>
+                        <button class="btn btn-info" id="btnOver">больше<br>↑</button>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-link" id="btnRetry">Заново</button>
+                </div>
+            </div>
+            <div class="col mt-4 text-center col-md-4 offset-md-4" id="min-value-window">
+                <form>
+                    <div class="form-group">
+                        <label for="inp-min">Введите минимальное значение числа для игры:</label>
+                        <input type="text" placeholder="0" class="form-control" id="inp-min">
+                    </div>
+                    <button class="btn btn-primary" id="button-min">Далее</button>
+                </form>
+            </div>
+            <div class="col mt-4 text-center col-md-4 offset-md-4 collapse" id="max-value-window">
+                <form>
+                    <div class="form-group">
+                        <label for="inp-max">Введите максимальное значение числа для игры:</label>
+                        <input type="text" placeholder="100" class="form-control" id="inp-max">
+                    </div>
+                    <button class="btn btn-primary" id="button-max">Далее</button>
+                </form>
+            </div>
+            <div class="alert alert-primary text-center mt-4 collapse" id="alert-window" role="alert">
+                <h5>А теперь загадайте любое целое число от 
+                    <code id="alert-min">#</code> до <code id="alert-max">#</code>, а я его угадаю!</h5>
+                <button class="btn btn-primary mt-2" id="button-start">Поехали!</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
